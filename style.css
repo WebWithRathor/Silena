@@ -1,0 +1,671 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    position: relative;
+}
+
+.pages {
+    height: 65vw;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+#page0 {
+    background-color: #655B50;
+    color: #EAE3D1;
+}
+
+#page1 {
+    background-color: #EAE3D1;
+    color: #655B50;
+}
+
+#page2 {
+    background-color: #39505E;
+    color: #EAE3D1;
+}
+
+#page0>img {
+    position: absolute;
+    width: 8vw;
+    z-index: 23;
+    left: 50%;
+    transform: translatex(-50%);
+    top: 6%
+}
+
+.splash img {
+    position: absolute;
+    width: 17vw;
+    z-index: 990;
+    left: 65%;
+    top: 13%;
+    transform: translateX(-50%);
+}
+
+.gol {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1/1;
+    width: 120vw;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    justify-content: center;
+    /* background-color: black; */
+}
+
+.gol img {
+    min-height: 120vh;
+    min-width: 120vw;
+    object-fit: cover;
+}
+
+.content {
+    top: 11%;
+    display: flex;
+    height: 50%;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 4vw 8vw;
+
+}
+
+.box1,
+.box2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box1 h1 {
+    width: 50%;
+    font-size: 3.7vw;
+    font-family: Siena;
+}
+
+.box1 p {
+    font-family: Open Sans;
+    font-size: 1vw;
+    width: 50%;
+    margin-top: 3vw;
+    letter-spacing: 0.1vw;
+}
+
+.box2 h1 {
+    width: 50%;
+    margin-top: 4vw;
+    font-size: 1.2vw;
+    margin-left: 5vw;
+    cursor: pointer;
+
+}
+
+.box2 p {
+    font-size: 1.3vw;
+    width: 50%;
+    line-height: 2vw;
+}
+
+.box2 {
+    font-family: Siena;
+    align-items: end;
+    position: relative;
+    top: 80%;
+}
+
+#navbar {
+    position: fixed;
+    top: 0%;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 3vw;
+    font-size: 0.8vw;
+    color: #EAE3D1;
+    font-family: Siena;
+}
+
+#navbar h2 {
+    position: relative;
+}
+
+#navbar h2::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    margin-top: 1.5vw;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform linear 0.5s;
+    transform-origin: right;
+}
+
+#navbar h2:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+
+#navbar h2:hover {
+    cursor: pointer;
+}
+
+#nav1 {
+    display: flex;
+    gap: 2vw;
+}
+
+
+.circle {
+    aspect-ratio: 1/1;
+    width: 1vw;
+    background-color: #EAE3D1;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: .5vw;
+}
+
+#page1 .circle {
+    background-color: #655B50;
+}
+
+.box2 h1:hover .circle {
+    scale: 2;
+    transition: all ease 0.4s;
+
+}
+
+#page3 {
+    background-color: #EAE3D1;
+    height: 100vh;
+    width: 100%;
+    padding: 2vw 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#content {
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 10vw;
+}
+
+.conts {
+    width: 33.3%;
+    height: 100%;
+    font-family: Siena;
+    color: #655B50;
+    position: relative;
+}
+
+#cont1 {
+    padding: 1vw;
+    z-index: 4;
+}
+
+.conts h1 {
+    font-size: 4.6vw;
+    font-weight: 400;
+}
+
+.conts p {
+    font-size: 1.4vw;
+    font-family: Open Sans;
+}
+
+#cont2 {
+    z-index: 2;
+
+}
+
+
+#cont3 {
+    flex-direction: column;
+    display: flex;
+    text-align: end;
+    justify-content: center;
+    z-index: 3;
+}
+
+#photu svg {
+    aspect-ratio: 1/1;
+    width: 95%;
+    /* background-color: #39505E; */
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    left: 40%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+
+
+#cont2>img {
+    aspect-ratio: 1/1;
+    width: 90%;
+    background-color: #39505E;
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+    /* left: 10%; */
+}
+
+#page4 {
+    background-color: #655B50;
+    height: 100vh;
+    width: 100%;
+    padding: 2vw 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#page5 {
+    background-color: rgb(213, 199, 163);
+    position: absolute;
+    top: 100%;
+    height: 100vh;
+    width: 100%;
+    padding: 2vw 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#page4 h1 {
+    width: 85%;
+    text-align: center;
+    font-size: 1.7vw;
+    font-family: Siena;
+    margin-bottom: 2vw;
+    color: #EAE3D1;
+    margin-top: 5vw;
+}
+
+#page5 h1 {
+    width: 85%;
+    text-align: center;
+    font-size: 1.7vw;
+    font-family: Siena;
+    margin-bottom: 2vw;
+    color: #655B50;
+}
+
+#page4 h2 {
+    font-family: Open Sans;
+    font-size: 1.4vw;
+    font-weight: 300;
+    color: #EAE3D1;
+}
+
+#page5 h2 {
+    font-family: Open Sans;
+    font-size: 1.2vw;
+    color: #655B50;
+}
+
+.svg {
+    position: absolute;
+    top: 15%;
+    z-index: 2;
+}
+
+
+#page6 {
+    height: 130vh;
+    width: 100%;
+    background-color: #EAE3D1;
+    color: #655B50;
+}
+
+.feeds {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.feeds .photo {
+    aspect-ratio: 1/1;
+    width: 27vw;
+    border-radius: 50%;
+    background-color: black;
+    overflow: hidden;
+}
+
+.feeds .photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.details {
+    display: flex;
+    gap: 2.7vw;
+    align-items: center;
+    flex-direction: column;
+    font-family: Siena;
+}
+
+.details h2 {
+    font-family: Open Sans;
+    font-size: 1vw;
+    letter-spacing: 0.3vw;
+}
+
+.details h3 {
+    font-size: 1.2vw;
+    letter-spacing: 0.1vw;
+    cursor: pointer;
+}
+
+.details h1 {
+    font-size: 4vw;
+    font-weight: 300;
+    width: 60vw;
+}
+
+.bars {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    height: 0.8vw;
+    position: relative;
+    bottom: -5%;
+}
+
+.bar {
+    width: 5vw;
+    background-color: #655B50;
+    height: 0.1vw;
+    border-radius: 2vw;
+}
+
+.bar:hover {
+    border-radius: 2vw;
+    height: 0.3vw;
+    transition: ease 0.2s;
+    cursor: pointer;
+}
+
+#page7 {
+    height: 100vh;
+    width: 100%;
+    background-color: #39505E;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+#page7 .boxs1 {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 8vw;
+    padding-bottom: 3vw;
+    gap: 2vw;
+    font-family: Open Sans;
+}
+
+.boxs1 a {
+    color: #d5c7a3;
+    font-weight: 100;
+    letter-spacing: 0.1vw;
+}
+
+.box-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+}
+
+.box-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2vw;
+}
+
+.boxs1 h2 {
+    font-weight: 400;
+    color: #d5c7a3;
+    font-size: 1vw;
+    line-height: 1.3vw;
+    letter-spacing: 0.1vw;
+}
+
+#page7 .boxs2 {
+    color: #d5c7a3;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    text-align: center;
+    font-family: Siena;
+}
+
+.boxs2 .boxs2-1 {
+    font-size: 4.5vw;
+    width: 62%;
+    line-height: 6.5vw;
+}
+
+.boxs2 .boxs2-2 {
+    font-size: 2vw;
+    width: 62%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 2vw;
+    position: relative;
+    top: 5%;
+}
+
+.icon {
+    aspect-ratio: 1/1;
+    width: 4vw;
+    border: 2px solid #d5c7a3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.7vw;
+}
+
+.icon:hover {
+    scale: 1.3;
+    transition: ease 1s;
+    cursor: pointer;
+}
+
+#page7>img {
+    position: absolute;
+}
+
+.ims1 {
+    top: -17%;
+    left: -5%;
+}
+
+.ims2 {
+    bottom: -3%;
+    right: -3%;
+    width: 20vw;
+}
+
+#footer {
+    background-color: #ffffff;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+}
+
+.foots {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    width: 50%;
+    height: 100%;
+    padding: 3vw;
+}
+
+.foots img {
+    height: 5vw;
+}
+
+#foot2 {
+    gap: 2vw;
+    color: #655B50;
+    font-size: 0.8vw;
+    letter-spacing: 0.2vw;
+    font-family: Open Sans;
+    justify-content: flex-end;
+}
+
+#foot2 h2:hover {
+    color: #EAE3D1;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+#cover-page {
+    position: absolute;
+    width: 150%;
+    aspect-ratio: 1/1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#c-page {
+    background-color: #655B50;
+    overflow: hidden;
+    position: relative;
+    height: 120vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#c-page h1 {
+    color: #EAE3D1;
+    font-family: Siena;
+    font-size: 3.5vw;
+    font-weight: 100;
+    letter-spacing: 0.1vw;
+}
+
+#c-page img {
+    position: absolute;
+    width: 25vw;
+}
+
+#c-page #br1 {
+    top: -7%;
+    right: -7%;
+}
+
+#c-page #br2 {
+    bottom: -7%;
+    left: -7%;
+}
+#menu{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #655B50;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -100%;
+    overflow: hidden;
+}
+/* #fets{
+} */
+#menu img{
+    position: absolute;
+    left: -5%;
+    bottom: -5%;
+    width: 22vw;
+}
+#menu .cross{
+    font-size: 3vw;
+    position: absolute;
+    color: #d5c7a3;
+    font-weight: lighter;
+    top: 2%;
+    right: 2%;
+}
+#menu .cross:hover{
+    color: #EAE3D1;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+.fet1 {
+    font-size: 1.7vw;
+    margin-bottom: 1.2vw;
+    text-align: right;
+    font-family: Siena;
+    font-weight: 100;
+    color: #a09578;
+    overflow: hidden;
+}
+.fet1 h1{
+    font-weight: 100;
+}
+#menu .fet1:hover{
+    color: #dad3c1;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
